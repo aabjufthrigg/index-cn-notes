@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咪咕体育 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'SimSun', serif;
+            background-color: #f9f6f0;
+            color: #2e2a24;
+            line-height: 1.7;
+            padding: 0 1.2rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.8rem 0 4rem;
+        }
+
+        /* 首页横幅——杂志式全宽标题区 */
+        .hero {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 3rem 1.8rem 2.5rem;
+            background: #ece6db;
+            border-left: 6px solid #b8a58c;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .hero::before {
+            content: "⚡";
+            font-size: 2.4rem;
+            position: absolute;
+            top: 1rem;
+            right: 1.6rem;
+            opacity: 0.25;
+            color: #7f6b54;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #3b3226;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            border-bottom: none;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #6b5c48;
+            font-style: italic;
+            border-top: 1px dashed #c9bbaa;
+            padding-top: 0.8rem;
+            margin-top: 0.6rem;
+        }
+
+        /* 文章段落排版 */
+        article {
+            margin-bottom: 2.2rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin: 2rem 0 1rem;
+            color: #4a3e30;
+            border-bottom: 2px dotted #d8cdbb;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            word-spacing: 0.5px;
+        }
+
+        /* 引用块 / 提示框——比一般引用更温和 */
+        .inset-box {
+            background: #f2ede6;
+            padding: 1.3rem 1.8rem;
+            margin: 1.8rem 0;
+            border-radius: 28px 8px 28px 8px;
+            border-left: 4px solid #b8a58c;
+            font-size: 0.98rem;
+            color: #3f372e;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .inset-box strong {
+            font-weight: 600;
+            color: #5b4a36;
+        }
+
+        .inset-box::before {
+            content: "▌";
+            font-size: 1.6rem;
+            margin-right: 0.3rem;
+            color: #9a8976;
+            vertical-align: middle;
+        }
+
+        /* 卡片式点缀：场景块 */
+        .card-scene {
+            background: #ffffffd9;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+            border-radius: 40px 12px 40px 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+            border: 1px solid #e2d9ce;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card-scene p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd3c3;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5c5142;
+        }
+
+        .footer-note a {
+            color: #5a4735;
+            text-decoration: none;
+            border-bottom: 1px solid #b9aa96;
+            padding-bottom: 1px;
+            font-weight: 400;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .footer-note a:hover {
+            color: #2f261d;
+            border-bottom-color: #2f261d;
+        }
+
+        .footer-note .small-meta {
+            display: block;
+            margin-top: 0.6rem;
+            color: #8a7d6c;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 640px) {
+            body {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.2rem;
+                border-left-width: 4px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .card-scene {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                padding: 3.6rem 2.8rem;
+            }
+        }
+
+        /* 装饰性分隔 */
+        .quiet-break {
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 8px;
+            color: #c5b7a5;
+            margin: 0.8rem 0 0.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 首页横幅 -->
+    <div class="hero">
+        <h1>咪咕体育</h1>
+        <div class="sub">赛事场边 · 另一种观看的方式</div>
+    </div>
+
+    <!-- 背景说明 · 从主题展开 -->
+    <article>
+        <p>
+            体育直播早已不再只是信号与比分的叠加。当我们谈论「咪咕体育」时，谈论的是一整套画面、叙事与陪伴的集合——从五大联赛到国内职业赛场，从清晨的室外到深夜的起居室，它逐渐成为许多人日常观看的基座之一。这种转变并非一夜间发生，而是随着转播权的积累、解说团队的沉淀、以及产品界面里那些微小细节的调整，慢慢长成了如今的模样。
+        </p>
+
+        <p>
+            平台背后的逻辑，其实藏于每一次选择观看的瞬间：你点开一场比赛，不是为了数据，而是为了那种“正在发生”的参与感。而「咪咕体育」恰好承接了这种需求——不刻意制造喧嚣，却在画质、多视角、回放与社区讨论之间，给出了一种更沉静的在场感。这或许才是它区别于其他平台的内核：它不只在转播体育，它还在转播一种日常仪式。
+        </p>
+    </article>
+
+    <!-- 第一段自然介绍：特点与切口 -->
+    <h2>不止是信号，更是场景</h2>
+    <p>
+        但凡观看过几场赛事直播的人都会注意到，同一场比赛在不同平台上的体验往往截然不同。而「咪咕体育」似乎格外在意“现场之外的空间”：比如中场时的幕后花絮、赛前的前瞻数据可视化，甚至字幕组对球员采访的翻译风格——这些看似边缘的环节，实际上定义了你对一场比赛的记忆。它不再仅仅是“看球”，而是进入了某个经过编排但又保留即兴的体育叙事里。
+    </p>
+
+    <!-- 提示框 / 引用块 -->
+    <div class="inset-box">
+        <strong>一种观察</strong> 许多用户不会特意提起平台的存在，但当你问起“昨晚那场球在哪里看的”，得到的回答常常是：“就在咪咕体育。”——这种默认，恰恰是日常感最诚实的流露。
+    </div>
+
+    <!-- 第二段自然介绍：内容纵深 -->
+    <h2>从赛事到文化的延长线</h2>
+    <p>
+        足球、篮球、网球、电竞……「咪咕体育」的内容版图在逐年扩展，但更有意思的是它在内容纵深上的试探：专题纪录片、球员侧写、甚至复古经典赛事的修复重播。这些内容不追求即时的流量，却为那些对体育有更深兴趣的人提供了可回味的线索。一个平台的文化厚度，往往就藏在这些“不紧急但重要”的内容之中。
+    </p>
+
+    <!-- 卡片块——场景描述，更安静的语气 -->
+    <div class="card-scene">
+        <p>
+            周末午后，打开一场延迟的德甲回放，屏蔽比分，自己掌控节奏——这是一种相当个人的观看方式。没有弹幕，没有实时压力，只剩下画面与解说声。「咪咕体育」的回放界面里，那个不起眼的“跳过暂停”按钮，恰恰成全了这种自在。好的设计往往隐身，而你只会感受到流畅。
+        </p>
+    </div>
+
+    <!-- 第三段自然介绍：结语式的收束 -->
+    <h2>观看的终点，是下一次打开</h2>
+    <p>
+        无论是欧洲杯期间的熬夜，还是寻常联赛日的傍晚，「咪咕体育」已经成为很多人默认的起点。它不许诺激情，但提供稳定的入口；它不制造奇观，却让每一场比赛都保留一种属于观众自己的节奏。体育的魅力从来不完全在于胜负，而在于那种“知道有人在同步观看”的默契。而这，或许就是平台最终想维持的东西。
+    </p>
+
+    <div class="quiet-break">· · ·</div>
+
+    <!-- 页尾访问提示，嵌入链接：文本必须正好是「咪咕体育」 -->
+    <div class="footer-note">
+        <p>
+            如果你也习惯在比赛日找一个安静的角落，也许可以试试 
+            <a href="https://index-cn-migu.com">咪咕体育</a> ——
+            那里总有一场正在进行中的赛事，等着被打开。
+        </p>
+        <span class="small-meta">独立杂志专题 · 2025</span>
+    </div>
+
+</div>
+</body>
+</html>
